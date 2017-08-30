@@ -3,7 +3,7 @@ JjalvarezlPDFjsViewerBundle
 
 [![Build Status](https://travis-ci.org/jjalvarezl/JjalvarezlPDFjsViewerBundle.svg?branch=master)](https://travis-ci.org/jjalvarezl/JjalvarezlPDFjsViewerBundle)
 
-This bundle provides a simple integration of the "[PDF.JS library](https://github.com/mozilla/pdf.js)" from mozilla into Symfony2 with different custom parameters.
+This bundle provides a simple integration of the "[PDF.JS library](https://github.com/mozilla/pdf.js)" from mozilla into Symfony3 with different custom parameters.
 
 Following features are supported:
 * Access to pdf outside from web directory.
@@ -13,12 +13,24 @@ Following features are supported:
 Installation
 ============
 
+### 0) Add my repository to your Composer
+
+This is necessary because you will be using a forked repository
+``` composer
+	"repositories" : [{
+			"type" : "vcs",
+			"url" : "https://github.com/wypalacz/JjalvarezlPDFjsViewerBundle.git"
+		}
+	]
+```
+
+
 ### 1) Download JjalvarezlPDFjsViewerBundle
 
 Its necessary to provide the bundle's name in order to download it:
 
 ``` bash
-$ php composer.phar require jjalvarezl/pdfjs-viewer-bundle
+$ php composer.phar require jjalvarezl/pdfjs-viewer-bundle:dev-sf3
 ```
 
 ### 2) Enable the bundle
@@ -37,6 +49,11 @@ public function registerBundles()
         new jjalvarezl\PDFjsViewerBundle\jjalvarezlPDFjsViewerBundle(),
     );
 }
+```
+
+### 3) 
+``` bash
+bin/console assets:install --symlink
 ```
 
 ## Concepts before usage:
