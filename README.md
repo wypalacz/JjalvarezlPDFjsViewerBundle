@@ -51,9 +51,9 @@ public function registerBundles()
 }
 ```
 
-### 3) 
+### 3) Install assets
 ``` bash
-bin/console assets:install --symlink
+$ bin/console assets:install --symlink
 ```
 
 ## Concepts before usage:
